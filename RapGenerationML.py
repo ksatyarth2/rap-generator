@@ -37,14 +37,12 @@ def predict(seed,tab,k=5):
     
     return next_char
 # In[73]:
-def rapthis(file,seed):
+def rapthis(file,seed="apna time"):
     # data=opfile(file)
-    data=opfile(file)
+    data=file
     tab=table(data.lower())
     # seed="time aayega"
-    for i in range(300):
+    for i in range(len(data)):
         nextc=predict(seed,tab)
         seed+=nextc
     return seed
-# rap=rapthis("apna-time.txt")
-# print(rap)

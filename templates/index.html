@@ -29,12 +29,12 @@
                 <h1 class="heading">Rap Generator</h1>
                 <p class="text">Generate some funny rap based on uploaded rap..</p>
                 <br>
-                <h4>1. Upload any lyrics file (.txt)<br>
+                <h4>1. Upload the lyrics of sample rap<br>
                 2. Enter a first few words of the lyrics.<br>3. Enjoy!</h4>
             </div>
         </div>
             <form class="form-inline" method="POST" action="/" enctype="multipart/form-data">
-                <input class="form-control" type="file" name="userfile" placeholder="Sample">
+                <textarea class="form-control" type="text" name="userfile" placeholder="Sample lyrics" rows="8" cols="40"></textarea>
                 <input class="form-control" type="text" name="usertext" placeholder="Enter first line of the rap..">
                 <button type="submit" class="btn btn-primary">Generate</button>
             </form>

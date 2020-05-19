@@ -11,12 +11,14 @@ def hello():
 @app.route('/', methods = ['POST'])
 def home():
     if request.method=="POST":
-        f= request.files['userfile']
-        path="./static/{}".format(f.filename)
-        f.save(path)
+        f= request.form['userfile']
+        # f='"""'+str(f1)+'"""'
+        # print(f)
+        # path="./static/{}".format(f.filename)
+        # f.save(path)
         line= request.form['usertext']
         # print(line)
-        rap=RapGenerationML.rapthis(path,line)
+        rap=RapGenerationML.rapthis(f,line)
         # print(rap)
         
     return render_template("index.html", raps=rap)
