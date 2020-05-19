@@ -8,7 +8,7 @@ def opfile(file):
         data = f.read()
         return data
 # In[65]:
-def table(data,k=5):
+def table(data,k=4):
     Tab={}
     for i in range(len(data)-k):
         x=data[i:i+k]
@@ -23,7 +23,7 @@ def table(data,k=5):
                 Tab[x][y]+=1
     return Tab
 # In[67]:
-def predict(seed,tab,k=5):
+def predict(seed,tab,k=4):
     inp = seed[-k:]
     
     possibliteis = tab[inp]
@@ -37,7 +37,7 @@ def predict(seed,tab,k=5):
     
     return next_char
 # In[73]:
-def rapthis(file,seed="apna time"):
+def rapthis(file,seed):
     # data=opfile(file)
     data=file
     tab=table(data.lower())
