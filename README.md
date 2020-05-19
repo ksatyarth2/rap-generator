@@ -1,1 +1,1 @@
-# Lyrics-Generation-Workshop
+# rap-generator

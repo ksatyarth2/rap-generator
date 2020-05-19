@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Rap Generator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- <script src='main.js'></script> -->
+    <style>
+    .heading{
+        font-weight: 100;
+        font-size: 4em;
+        text-shadow: 1px 1px 5px black;
+    }
+    .text{
+        font-size: 2em;
+        font-style: italic;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="jumbotron alert alert-warning">
+            <div class="container">
+                <h1 class="heading">Rap Generator</h1>
+                <p class="text">Generate some funny rap based on uploaded rap..</p>
+                <br>
+                <h4>1. Upload any lyrics file (.txt)<br>
+                2. Enter a first few words of the lyrics.<br>3. Enjoy!</h4>
+            </div>
+        </div>
+            <form class="form-inline" method="POST" action="/" enctype="multipart/form-data">
+                <input class="form-control" type="file" name="userfile" placeholder="Sample">
+                <input class="form-control" type="text" name="usertext" placeholder="Enter first line of the rap..">
+                <button type="submit" class="btn btn-primary">Generate</button>
+            </form>
+            <br>
+            {% if raps%}
+            <p class="text"><h3>Generated Lyrics:</h3>
+            <br>
+            <i><pre>{{raps}}</pre></i></p>
+            {%endif%}
+    </div>
+</body>
+</html>
