@@ -10,7 +10,7 @@
 
     <!-- <script src='main.js'></script> -->
 
-    <!-- Local styleshet -->
+    <!-- Local stylesheet -->
     <link rel="stylesheet" href="./styles.css">
     
 </head>
@@ -20,23 +20,29 @@
         <div class="jumbotron alert alert-warning">
             <div class="container">
                 <h1 class="heading">Rap Generator</h1>
-                <p class="text">Generate some funny rap based on uploaded rap..</p>
+                <p class="text">Generate some funny rap based on sample lyrics</p>
                 <br>
-                <h4>1. Upload the lyrics of sample rap (minimum 200 characters)<br>
-                2. Enter a first few words of the lyrics. (minimum 4 characters)<br>3. Enjoy!</h4>
+                <h4>
+                    1. Upload the lyrics of sample rap (Minimum 200 characters)
+                    <br>
+                    2. Enter first few words of the rap (Minimum 4 characters)
+                    <br>
+                    3. Click <b>Generate</b>. Enjoy!
+                </h4>
             </div>
         </div>
-            <form class="form-inline" method="POST" action="/" enctype="multipart/form-data">
-                <textarea class="form-control" type="text" name="userfile" placeholder="Sample lyrics" rows="8" cols="40"></textarea>
-                <input class="form-control" type="text" name="usertext" placeholder="Enter first line of the rap..">
-                <button type="submit" class="btn btn-primary">Generate</button>
-            </form>
-            <br>
-            {% if raps%}
-            <p class="text"><h3>Generated Lyrics:</h3>
-            <br>
-            <i><pre>{{raps}}</pre></i></p>
-            {%endif%}
+
+        <form class="form-group" method="POST" action="/" enctype="multipart/form-data">
+            <textarea class="form-control" type="text" name="userfile" placeholder="Enter sample lyrics here..." rows="5" cols="80"></textarea>
+            <input class="form-control" type="text" name="usertext" placeholder="Enter starting words of rap here...">
+            <button type="submit" class="btn btn-primary">Generate</button>
+        </form>
+        <br>
+        {% if raps%}
+        <p class="text"><h3>Generated Lyrics:</h3>
+        <br>
+        <i><pre>{{raps}}</pre></i></p>
+        {%endif%}
     </div>
 </body>
 </html>
