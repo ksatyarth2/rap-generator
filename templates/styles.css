@@ -1,0 +1,17 @@
+body {
+    background-color: bisque;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+.heading{
+    font-weight: 100;
+    font-size: 4em;
+    text-shadow: 1px 1px 5px black;
+}
+.text{
+    font-size: 2em;
+    font-style: italic;
+}
